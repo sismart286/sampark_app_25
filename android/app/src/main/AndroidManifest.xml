@@ -36,9 +36,9 @@
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
-        android:label="sampark_app_25"
+        android:label="Sampark"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/sampark">
         <activity
             android:name=".MainActivity"
             android:exported="true"
