@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:sampark_app_25/Config/Images.dart';
 import 'package:sampark_app_25/Config/Strings.dart';
+import 'package:sampark_app_25/Controller/AppController.dart';
 import 'package:sampark_app_25/Controller/CallController.dart';
 import 'package:sampark_app_25/Controller/ContactController.dart';
 import 'package:sampark_app_25/Controller/ImagePicker.dart';
@@ -31,6 +32,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         Get.put(ImagePickerController());
     StatusController statusController = Get.put(StatusController());
     CallController callController = Get.put(CallController());
+    Appcontroller appcontroller = Get.put(Appcontroller());
 
     return Scaffold(
       appBar: AppBar(
@@ -48,7 +50,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         actions: [
           IconButton(
             onPressed: () {
-              contactController.getChatRoomList();
+              appcontroller.checkLatestVersion();
             },
             icon: Icon(Icons.search),
           ),
